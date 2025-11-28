@@ -36,7 +36,7 @@ async def ocr_text(file: UploadFile = File(..., description="Image file to perfo
         return OCRResponse(
             success=True,
             message="OCR completed successfully",
-            full_text=full_text,
+            context=full_text,
             results=results,
             total_detections=len(results)
         )

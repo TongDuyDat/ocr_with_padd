@@ -8,7 +8,7 @@ class OCRResponse(BaseModel):
     """Response for text OCR endpoint"""
     success: bool = Field(..., description="Whether OCR was successful")
     message: str = Field(..., description="Status message")
-    full_text: str = Field("", description="Complete text content from all detections")
+    context: str = Field("", description="Complete text content from all detections")
     results: List[OCRTextResult] = Field(default_factory=list, description="List of detected texts")
     total_detections: int = Field(0, description="Total number of text detections")
 
