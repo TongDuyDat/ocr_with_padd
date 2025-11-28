@@ -1,0 +1,5 @@
+*.pyc
+images
+output
+tests
+__pycache__
